@@ -36,7 +36,7 @@ class AplicacionTurnos:
         main_paned.add(right_frame, weight=2)
         
         # ===== LEFT FRAME - CONTROLES =====
-        ttk.Label(left_frame, text="Registrar Nuevo Turno", font=("Arial", 12, "bold")).grid(row=0, column=0, columnspan=2, pady=10, sticky=tk.W)
+        ttk.Label(left_frame, text="Registrar Nuevo Turno", font=("Times New Roman", 15, "bold")).grid(row=0, column=0, columnspan=2, pady=10, sticky=tk.W)
         
         ttk.Label(left_frame, text="Nombre:").grid(row=1, column=0, sticky=tk.W, pady=5)
         self.nombre_entry = ttk.Entry(left_frame, width=25)
@@ -56,7 +56,7 @@ class AplicacionTurnos:
         ttk.Separator(left_frame, orient=tk.HORIZONTAL).grid(row=5, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=10)
         
         # Sección de atención
-        ttk.Label(left_frame, text="Atención de Turnos", font=("Arial", 12, "bold")).grid(row=6, column=0, columnspan=2, pady=10, sticky=tk.W)
+        ttk.Label(left_frame, text="Atención de Turnos", font=("Times New Roman", 15, "bold")).grid(row=6, column=0, columnspan=2, pady=10, sticky=tk.W)
         
         ttk.Button(left_frame, text="Atender Siguiente Turno", command=self.atender_turno).grid(row=7, column=0, columnspan=2, pady=5)
         
@@ -83,7 +83,7 @@ class AplicacionTurnos:
         left_frame.columnconfigure(1, weight=1)
         
         # ===== RIGHT FRAME - VISUALIZACIÓN GRAPHVIZ =====
-        ttk.Label(right_frame, text="Visualización de la Cola - Graphviz", font=("Arial", 12, "bold")).grid(row=0, column=0, pady=5, sticky=tk.W)
+        ttk.Label(right_frame, text="Visualización de la Cola", font=("Times New Roman", 15, "bold")).grid(row=0, column=0, pady=5, sticky=tk.W)
         
         # Frame para la imagen Graphviz
         graph_frame = ttk.Frame(right_frame, relief=tk.SUNKEN, borderwidth=2)
@@ -92,7 +92,7 @@ class AplicacionTurnos:
         graph_frame.rowconfigure(0, weight=1)
         
         # Label para mostrar la imagen
-        self.graph_label = ttk.Label(graph_frame, text="No hay turnos para mostrar", background='white')
+        self.graph_label = ttk.Label(graph_frame, text="No hay turnos para mostrar", background="#beeacc")
         self.graph_label.pack(fill=tk.BOTH, expand=True, padx=5, pady=5)
         
         # Configurar expansión right frame
